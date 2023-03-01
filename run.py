@@ -1,3 +1,18 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+pokerhands = []
+deck = Deck()
+deck.shuffle()
+number_of_players = int(input(' How many players (1-7)? ', 'light_blue'))
+for index in range(number_of_players):
+players = Players(deck.deal())
+pokerhands.append({**players.best_hand(), 'players_nr': index})
+
+sorted_hands = sorted(
+pokerhands,
+key=lambda hand: (-hand['rank'], -hand['highest_rank'])
+)
+
+for players in sorted_hands:
+print(
+f' players: {players["players_nr"] + 1}: {players["hand_str"]} =',
+*players["hand"]
+)

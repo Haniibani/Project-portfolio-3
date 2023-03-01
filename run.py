@@ -34,6 +34,12 @@ def main():
         print(
         f' players: {players["players_nr"] + 1}: {players["hand_str"]} =',
         *players["hand"])
+    
+    play_again = input('Wanna play again? y/n: ')
+    if play_again == "y":
+        main()
+    else:
+        animate_text("Thanks for playing")
 
 animate_text("Welcome to Hannas Poker!\n")
 main()

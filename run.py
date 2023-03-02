@@ -27,9 +27,10 @@ def main():
     number_of_players = 0
     while number_of_players not in range(1, 8):
         try:
-          number_of_players = int(input("Please enter a number between 1 and 7: "))
-          if number_of_players not in range(1, 8):
-              print(colored("Not a valid number", "red"))
+            number_of_players = int(input(
+                "Please enter a number between 1 and 7: "))
+            if number_of_players not in range(1, 8):
+                print(colored("Not a valid number", "red"))
         except ValueError:
             print(colored("Please enter a valid number", "red"))
 

@@ -12,10 +12,14 @@ class Card:
 
     Methods:
         __str__(): Returns a string representation of the card.
-        __eq__(other): Returns True if the rank of this card is equal to the rank of another card.
-        __ne__(other): Returns True if the rank of this card is not equal to the rank of another card.
-        __lt__(other): Returns True if the rank of this card is less than the rank of another card.
-        __gt__(other): Returns True if the rank of this card is greater than the rank of another card.
+        __eq__(other): Returns True if the rank of this card is equal to the
+            rank of another card.
+        __ne__(other): Returns True if the rank of this card is not equal to
+            the rank of another card.
+        __lt__(other): Returns True if the rank of this card is less than the
+            rank of another card.
+        __gt__(other): Returns True if the rank of this card is greater than
+            the rank of another card.
     """
 
     def __init__(self, rank, suit):
@@ -29,17 +33,21 @@ class Card:
         return f'{self.suit}{self.rank}'
 
     def __eq__(self, other):
-        """Return True if the rank of this card is equal to the rank of another card."""
+        """Return True if the rank of this card is equal to the rank of
+            another card."""
         return self.rank == other.rank
 
     def __ne__(self, other):
-        """Return True if the rank of this card is not equal to the rank of another card."""
+        """Return True if the rank of this card is not equal to the
+            rank of another card."""
         return self.rank != other.rank
 
     def __lt__(self, other):
-        """Return True if the rank of this card is less than the rank of another card."""
+        """Return True if the rank of this card is less than
+            the rank of another card."""
         return self.value_rank < other.value_rank
 
     def __gt__(self, other):
-        """Return True if the rank of this card is greater than the rank of another card."""
+        """Return True if the rank of this card is greater than
+            the rank of another card."""
         return self.value_rank > other.value_rank

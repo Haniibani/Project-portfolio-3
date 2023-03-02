@@ -1,11 +1,14 @@
 from .Poker import Poker
 
 
+# Define a Players class that inherits from the Poker class
 class Players(Poker):
     def __init__(self, hand):
         super().__init__(hand)
 
+    # Define a method that returns the best hand
     def best_hand(self):
+        # Check for a royal straight flush
         royal_straight_flush = self.royal_straight_flush()
         if royal_straight_flush:
             return {
@@ -16,6 +19,7 @@ class Players(Poker):
                 self.high_card(royal_straight_flush).value_rank
             }
 
+        # Check for a straight flush
         straight_flush = self.straight_flush()
         if straight_flush:
             return {
@@ -25,6 +29,7 @@ class Players(Poker):
                 "highest_rank": self.high_card(straight_flush).value_rank
             }
 
+        # Check for a four of a kind
         four_of_kind = self.four_of_kind()
         if four_of_kind:
             return {
@@ -34,6 +39,7 @@ class Players(Poker):
                 "highest_rank": self.high_card(four_of_kind).value_rank
             }
 
+        # Check for a full house
         full_house = self.full_house()
         if full_house:
             return {
@@ -43,6 +49,7 @@ class Players(Poker):
                 "highest_rank": self.high_card(full_house).value_rank
             }
 
+        # Check for a flush
         flush = self.flush()
         if flush:
             return {
@@ -52,6 +59,7 @@ class Players(Poker):
                 "highest_rank": self.high_card(flush).value_rank
             }
 
+        # Check for a straight
         straight = self.straight()
         if straight:
             return {
@@ -61,6 +69,7 @@ class Players(Poker):
                 "highest_rank": self.high_card(straight).value_rank
             }
 
+        # Check for three of a kind
         three_of_kind = self.three_of_kind()
         if three_of_kind:
             return {
@@ -70,6 +79,7 @@ class Players(Poker):
                 "highest_rank": self.high_card(three_of_kind).value_rank
             }
 
+        # Check for two pair
         two_pair = self.two_pair()
         if two_pair:
             return {
@@ -79,6 +89,7 @@ class Players(Poker):
                 "highest_rank": self.high_card(two_pair).value_rank
             }
 
+        # Check for a pair
         pair = self.pair()
         if pair:
             return {
@@ -88,6 +99,7 @@ class Players(Poker):
                 "highest_rank": self.high_card(pair).value_rank
             }
 
+        # If no other hand was found, return the high card
         high_card = self.high_card()
         if high_card:
             return {

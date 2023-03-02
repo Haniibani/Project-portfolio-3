@@ -57,10 +57,10 @@ def main():
         if play_again in ["y", "Y"]:
             main()
         elif play_again in ["n", "N"]:
-            animate_text(colored("Thanks for playing", "blue"))
+            animate_text(colored("Thanks for playing\n", "blue"))
             sys.exit()  # Exit the program if the user enters "n" or "N"
         else:
-            print(colored("Please answer y or n\n", "blue"))
+            print(colored("Please answer y or n", "blue"))
 
 
 # Print a welcome message and start the game.

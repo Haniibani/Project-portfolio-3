@@ -61,7 +61,7 @@ def main():
             animate_text(colored("Thanks for playing\n", "blue"))
             sys.exit()  # Exit the program if the user enters "n" or "N"
         else:
-            print(colored("Please answer y or n", "blue"))
+            print(colored("Please answer y or n", "red"))
 
 
 # Print a welcome message and start the game.

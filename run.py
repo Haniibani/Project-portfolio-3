@@ -54,7 +54,8 @@ def main():
 
     # Ask the user if they want to play again.
     while True:
-        play_again = input(colored('Wanna play again? y/n: ', 'magenta', attrs=["bold"]))
+        play_again = input(colored
+                          ('Wanna play again? y/n: ', 'magenta', attrs=["bold"]))
         if play_again in ["y", "Y"]:
             main()
         elif play_again in ["n", "N"]:

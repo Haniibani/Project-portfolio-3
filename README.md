@@ -3,7 +3,7 @@
 So this game is basically a five-card draw without the "draw" part, so the player only gets to play with the initial 5 cards they were dealt.
 I made this game as a part of [Code Insitute's](https://codeinstitute.net/se/) fullstack developer course where i had to "build a command-line application that allows your users to manage a common dataset about a particular domain."
 
-<img src="README-images/pokergame.png" alt="Picture of webpage across different devices" width="600px">
+<img src="README-images/pokergame.png" width="600px">
 
 [Live link for game](https://hannaspokergame.herokuapp.com/)
 
@@ -43,6 +43,7 @@ I made this game as a part of [Code Insitute's](https://codeinstitute.net/se/) f
 - The user should not be able to enter in a wrong value.
 - The user should receive direct feedback on wheter the value is accepted or not.
 - The user should have the possiblity to play again and try to improve.
+- The user should get feedback on the end result, and the hand dealt (e.g. Three of a Kind).
 
 ### Design
 
@@ -72,7 +73,7 @@ The second design feature I used were the typwriting animation that text out eac
 
 1. The user is greeted with a welcome message being typed with an animation, then asked how many players wanna join. 
 
-<img src="README-images/greetingscreen.png" alt="Picture of the games greeting screen" width="600px">
+<img src="README-images/pokergame.png" width="600px">
 
 2. When the player types in an option that is a typo or isn't in general a valid respons, an error message comes up explaning the error and the user is asked the question again. Throughout the game, errors are handled in this way and loop back to the question.
 
@@ -84,7 +85,7 @@ The second design feature I used were the typwriting animation that text out eac
 
 4. Then the user gets asked if they wanna play again, and is prompted to use "y" or "n".
 
-<img src="README-images/playagain.png" alt="Picture of the game asking 'play again?'" width="600px">
+<img src="README-images/rightnumber.png" alt="Picture of the game asking 'play again?'" width="600px">
 
 5. If the user doesn not enter "y" or "n" either in lower case or uppercase the game will throw an error saying Please answer y or n.
 
@@ -150,7 +151,7 @@ time)
 
 ## Testing
 
-I used the CI Pythjon Linter, found at (https://pep8ci.herokuapp.com/#), to check that my Python code was up to the PEP8 standard. I coped and pasted my Python code into the box, a few errors accured such as whitespaces and line to long. But after quick fixes i reentered my code and my code passed with an all clear.
+I used the CI Python Linter, found at (https://pep8ci.herokuapp.com/#), to check that my Python code was up to the PEP8 standard. I coped and pasted my Python code into the box, a few errors accured such as whitespaces and line to long. But after quick fixes i reentered my code and my code passed with an all clear.
 
 <img src="README-images/allclear.png" width="600px">
 
@@ -165,8 +166,9 @@ I used the CI Pythjon Linter, found at (https://pep8ci.herokuapp.com/#), to chec
 
 ### Code Used
 
-For the text animation i have on my welcome text and my exiting text i used the code i found [Here](https://stackoverflow.com/questions/19911346/create-a-typewriter-effect-animation-for-strings-in-python). 
-  
+- For the text animation i have on my welcome text and my exiting text i used the code i found [Here](https://stackoverflow.com/questions/19911346/create-a-typewriter-effect-animation-for-strings-in-python). 
+- The poker hands and rankings werre copied from [this site](https://www.cardplayer.com/rules-of-poker/hand-rankings).
+
 ###  Acknowledgments
 
 - Martina Terlevic: My amazing Code Institute Mentor whos always there when i need her!

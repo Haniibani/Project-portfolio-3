@@ -54,7 +54,7 @@ def main():
 
     # Ask the user if they want to play again.
     while True:
-        play_again = input(colored('Wanna play again? y/n: ', 'magenta'))
+        play_again = input(colored('Wanna play again? y/n: ', 'magenta', attrs=["bold"]))
         if play_again in ["y", "Y"]:
             main()
         elif play_again in ["n", "N"]:
@@ -65,5 +65,5 @@ def main():
 
 
 # Print a welcome message and start the game.
-animate_text(colored("Welcome to Hannas Poker!\n", "magenta"))
+animate_text(colored("Welcome to Hannas Poker!\n", "magenta", attrs=["bold"]))
 main()
